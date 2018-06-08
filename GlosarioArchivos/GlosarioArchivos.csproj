@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E74D558F-A8CD-4BB2-8C49-23DE5A9971F5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GlosarioArchivos</RootNamespace>
+    <AssemblyName>GlosarioArchivos</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>\\hoperaciones\RAT\GlosarioArchivos\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>es-MX</TargetCulture>
+    <ProductName>Glosario</ProductName>
+    <PublisherName>Hipotecaria Su Casita</PublisherName>
+    <SuiteName>Glosario de archivos</SuiteName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Cleaner.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>C0FB5C46BACC1B8AB5B0B5823E2574A49954006C</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>GlosarioArchivos_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CheckBoxComboBox">
+      <HintPath>..\Dlls\CheckBoxComboBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Delimon.Win32.IO">
+      <HintPath>..\Dlls\Delimon.Win32.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.0.5022.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Dlls\DocumentFormat.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ObjectListView">
+      <HintPath>..\Dlls\ObjectListView.dll</HintPath>
+    </Reference>
+    <Reference Include="Ookii.Dialogs">
+      <HintPath>..\Dlls\Ookii.Dialogs.dll</HintPath>
+    </Reference>
+    <Reference Include="PieChart">
+      <HintPath>..\Dlls\PieChart.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsBulk.cs" />
+    <Compile Include="clsDataExt.cs" />
+    <Compile Include="ExportarExcel.cs" />
+    <Compile Include="FileSystemEnumerable.cs" />
+    <Compile Include="FolderSelectDialog.cs" />
+    <Compile Include="frmAdminEquipos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdminEquipos.Designer.cs">
+      <DependentUpon>frmAdminEquipos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEquipos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEquipos.Designer.cs">
+      <DependentUpon>frmEquipos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEspecial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEspecial.Designer.cs">
+      <DependentUpon>frmEspecial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmExtractor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExtractor.Designer.cs">
+      <DependentUpon>frmExtractor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmIni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIni.Designer.cs">
+      <DependentUpon>frmIni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Impersonator.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reflector.cs" />
+    <Compile Include="XCopy.cs" />
+    <EmbeddedResource Include="frmAdminEquipos.resx">
+      <DependentUpon>frmAdminEquipos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEquipos.resx">
+      <DependentUpon>frmEquipos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEspecial.resx">
+      <DependentUpon>frmEspecial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExtractor.resx">
+      <DependentUpon>frmExtractor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIni.resx">
+      <DependentUpon>frmIni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GlosarioArchivos_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Cleaner.ico" />
+    <None Include="Resources\pc_add_min_27.png" />
+    <None Include="Resources\pc_add_plus_27.png" />
+    <None Include="Resources\gears_animated_t1.gif" />
+    <None Include="Resources\Buscar_90.png" />
+    <None Include="Resources\Glossary write_128.png" />
+    <None Include="Resources\file_search b&amp;w.png" />
+    <None Include="Resources\select_none_20.png" />
+    <None Include="Resources\select_all_20.png" />
+    <None Include="Resources\floppy_disk-27.png" />
+    <None Include="Resources\play_27.jpg" />
+    <None Include="Resources\select_none_27.jpg" />
+    <None Include="Resources\select_all_27.jpg" />
+    <None Include="Resources\gears_animated_t.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <FileAssociation Include=".rgb">
+      <Visible>False</Visible>
+      <Description>Resultados de búsqueda para el extractor del glosario</Description>
+      <Progid>Extractor de glosario</Progid>
+      <DefaultIcon>Cleaner.ico</DefaultIcon>
+    </FileAssociation>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
